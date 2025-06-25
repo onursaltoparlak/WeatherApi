@@ -23,7 +23,7 @@ namespace Project6_ApiWeather.Controllers
         {
             context.Cities.Add(city);
             context.SaveChanges();
-            return Ok("Şehir Eklendi!");
+            return Ok("Şehir Eklendi");
         }
 
         [HttpDelete]
@@ -32,7 +32,7 @@ namespace Project6_ApiWeather.Controllers
             var value = context.Cities.Find(id);
             context.Cities.Remove(value);
             context.SaveChanges();
-            return Ok("Şehir Silindi!");
+            return Ok("Şehir Silindi");
         }
 
         [HttpPut]
@@ -44,7 +44,7 @@ namespace Project6_ApiWeather.Controllers
             value.Temp = city.Temp;
             value.Country = city.Country;
             context.SaveChanges();
-            return Ok("Şehir Güncellendi!");
+            return Ok("Şehir Güncellendi");
         }
 
         [HttpGet("GetByIdWeatherCity")]
